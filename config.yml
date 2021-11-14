@@ -1,0 +1,4 @@
+jtype: U500KIndexer
+metas:
+  py_modules:
+    - executor.py
