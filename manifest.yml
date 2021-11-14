@@ -1,2 +1,5 @@
 manifest_version: 1
-name: U500KIndexer
+name: U100KIndexer
+description: An Indexer that just works under 100K documents
+url: https://github.com/jina-ai/executor-U100KIndexer
+keywords: ['indexer', 'storage', 'simple', 'easy', 'demo', 'DocumentArrayMemmap']
