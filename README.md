@@ -4,6 +4,16 @@ An Indexer that works out-of-the-box when you have less than 100K stored Documen
 
 `U100KIndexer` leverages `jina.DocumenetArrayMemmap` as the storage backend and `.match()` to conduct nearest neighbours search. It returns the full Documents as-is, hence no need to concatenate it with another key-value indexer to retrieve Documents.
 
+
+## Highlights
+
+- Exhaustive search: highest recall
+- Fast indexing
+- Acceptable query performance under 100K
+- Always return full Documents
+
+## Performance
+
 The indexing and query performance on 768-dim embeddings is as follows (unit is second):
 
 |Stored data| Indexing time | Query size=1 | Query size=8 | Query size=64|
@@ -15,6 +25,8 @@ The indexing and query performance on 768-dim embeddings is as follows (unit is 
 |400000 | 11.105 | 1.289 | 1.536 | 2.793|
 
 Benchmark script can be found in [`benchmark.py`](benchmark.py).
+
+## Tips
 
 To change workspace, 
 
