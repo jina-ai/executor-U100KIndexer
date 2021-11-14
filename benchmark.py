@@ -36,7 +36,7 @@ for n_i in n_index:
             t_qs.append(t_q.duration)
         times[n_i][f'query_{n_q}'] = np.mean(t_qs[1:])  # remove warm-up
 
-print('|Stored data| Indexing time | Query size=1 | Query size=2 | Query size=64|')
+print('|Stored data| Indexing time | Query size=1 | Query size=8 | Query size=64|')
 print('|---' * (len(list(times.values())[0]) + 1) + '|')
 for k, v in times.items():
     s = ' | '.join(f'{v[vv]:.3f}' for vv in ['index', 'query_1', 'query_8', 'query_64'])
