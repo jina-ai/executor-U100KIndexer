@@ -1,6 +1,6 @@
 # U100KIndexer
 
-An Indexer that works out-of-the-box when you have less than 100K stored Documents. At 100K stored Documents with 768-dim embeddings, you can expect 300ms for single query or 20~120QPS for batch queries. Results are **full Documents**.
+An Indexer that works out-of-the-box when you have less than 100K stored Documents. `U100K` means under 100K. At 100K stored Documents with 768-dim embeddings, you can expect 300ms for single query or 20~120QPS for batch queries. Results are **full Documents**.
 
 `U100KIndexer` leverages `jina.DocumenetArrayMemmap` as the storage backend and `.match()` to conduct nearest neighbours search. It returns the full Documents as-is, hence no need to concatenate it with another key-value indexer to retrieve Documents.
 
