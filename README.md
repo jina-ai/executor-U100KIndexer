@@ -5,12 +5,17 @@ An Indexer that works out-of-the-box when you have less than 100K stored Documen
 `U100KIndexer` leverages `jina.DocumenetArrayMemmap` as the storage backend and `.match()` to conduct nearest neighbours search. It returns the full Documents as-is, hence no need to concatenate it with another key-value indexer to retrieve Documents.
 
 
-## Highlights
+## Pros & cons
 
+### Pros
 - Exhaustive search: highest recall
 - Fast indexing
 - Acceptable query performance under 100K
 - Always return full Documents
+- No extra dependencies
+
+### Cons
+- Slow query time
 
 ## Performance
 
